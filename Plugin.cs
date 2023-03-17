@@ -16,14 +16,11 @@ namespace simplycods.vineboom
         public const string PLUGIN_NAME = "simplycods.vineboom";
         public const string PLUGIN_VERSION = "1.0.0";
 
-        public static ManualLogSource _logger;
-
         private AssetBundle bundle;
         public static AudioClip theboom;
 
         private void Awake()
         {
-            _logger = Logger;
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("simplycods.vineboom.Resources.vineboom"))
             {
                 bundle = AssetBundle.LoadFromStream(stream);
